@@ -1,4 +1,4 @@
-package com.prime.oms.customer.controller;
+package com.nxpine.nhpark.customer.controller;
 
 
 import java.util.List;

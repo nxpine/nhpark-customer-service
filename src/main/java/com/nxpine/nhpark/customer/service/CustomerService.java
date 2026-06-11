@@ -1,4 +1,4 @@
-package com.nxpark.service.service;
+package com.nxpine.nhpark.customer.service;
 
 import com.nxpark.service.model.Customer;
 import java.util.List;

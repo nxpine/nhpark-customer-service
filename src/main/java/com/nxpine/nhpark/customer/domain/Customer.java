@@ -1,4 +1,4 @@
-package com.nxpark.service.model;
+package com.nxpine.nhpark.customer.domain;
 
 import jakarta.persistence.*;
 import lombok.Data;
