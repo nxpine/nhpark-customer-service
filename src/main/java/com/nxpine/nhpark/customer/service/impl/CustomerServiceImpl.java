@@ -1,8 +1,8 @@
-package com.nxpark.service.service.impl;
+package com.nxpine.nhpark.customer.service.impl;
 
-import com.nxpark.service.model.Customer;
-import com.nxpark.service.repository.CustomerRepository;
-import com.nxpark.service.service.CustomerService;
+import com.nxpine.nhpark.customer.domain.Customer;
+import com.nxpine.nhpark.customer.repository.CustomerRepository;
+import com.nxpine.nhpark.customer.service.CustomerService;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -19,40 +19,11 @@ public class CustomerServiceImpl implements CustomerService {
         this.customerRepository = customerRepository;
     }
 
-    @Override
-    public Customer createCustomer(Customer customer) {
-        return customerRepository.save(customer);
-    }
-
+   
     @Override
     public List<Customer> getAllCustomers() {
         return customerRepository.findAll();
     }
 
-    @Override
-    public Optional<Customer> getCustomerById(Long id) {
-        return customerRepository.findById(id);
-    }
-
-    @Override
-    public Customer updateCustomer(Long id, Customer customerDetails) {
-        return customerRepository.findById(id)
-                .map(existingCustomer -> {
-                    existingCustomer.setName(customerDetails.getName());
-                    existingCustomer.setEmail(customerDetails.getEmail());
-                    existingCustomer.setPhone(customerDetails.getPhone());
-                    return customerRepository.save(existingCustomer);
-                })
-                .orElseThrow(() -> new RuntimeException("Customer not found with id: " + id));
-    }
-
-    @Override
-    public boolean deleteCustomer(Long id) {
-        return customerRepository.findById(id)
-                .map(customer -> {
-                    customerRepository.delete(customer);
-                    return true;
-                })
-                .orElse(false);
-    }
+   
 }

@@ -1,6 +1,6 @@
-package com.nxpark.service.repository;
+package com.nxpine.nhpark.customer.repository;
 
-import com.nxpark.service.model.Customer;
+import com.nxpine.nhpark.customer.domain.Customer;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

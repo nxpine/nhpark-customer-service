@@ -1,14 +1,12 @@
 package com.nxpine.nhpark.customer.service;
 
-import com.nxpark.service.model.Customer;
 import java.util.List;
-import java.util.Optional;
+
+import com.nxpine.nhpark.customer.domain.Customer;
 
 public interface CustomerService {
-    Customer createCustomer(Customer customer);
     List<Customer> getAllCustomers();
-    Optional<Customer> getCustomerById(Long id);
-    Customer updateCustomer(Long id, Customer customerDetails);
-    boolean deleteCustomer(Long id);
+    
 }
 
+	
