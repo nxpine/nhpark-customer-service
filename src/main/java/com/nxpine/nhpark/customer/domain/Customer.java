@@ -1,5 +1,8 @@
 package com.nxpine.nhpark.customer.domain;
 
+import java.time.LocalDate;
+import java.time.Period;
+
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -16,6 +19,15 @@ public class Customer {
     
     @Column(nullable = false)
     private String email;
+
+    @Column
+    private LocalDate dob;
+
+    @Column
+    private String gender;
     
+    public int getAge() {
+     return Period.between(this.dob, LocalDate.now()).getYears(); 	
+    }
 }
 
