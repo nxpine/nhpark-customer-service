@@ -6,6 +6,8 @@ import com.nxpine.nhpark.customer.domain.Customer;
 
 public interface CustomerService {
     List<Customer> getAllCustomers();
+
+	Customer getCustomerById(Long id);
     
 }
 
