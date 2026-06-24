@@ -28,4 +28,11 @@ public class CustomerController {
     public Customer get(@PathVariable Long id) {
         return customerService.getCustomerById(id);
     }
+    
+    // Create customer
+    @PostMapping
+    public Customer create(@RequestBody Customer newCustomer) {
+    	return customerService.createCustomer(newCustomer);
+    	
+    }
 }
