@@ -35,4 +35,14 @@ public class CustomerController {
     	return customerService.createCustomer(newCustomer);
     	
     }
+    
+    //update customer
+    
+    @PatchMapping("/{id}")
+    public Customer update(@PathVariable Long id, @RequestBody Customer updatedCustomer) {
+    	return customerService.updateCustomer(id, updatedCustomer);
+    }
+    
+   
+    
 }
