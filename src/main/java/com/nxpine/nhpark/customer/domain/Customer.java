@@ -26,6 +26,9 @@ public class Customer {
     @Column
     private String gender;
     
+    @Column(name = "phone_number")
+    private String phoneNumber;
+    
     public int getAge() {
      return Period.between(this.dob, LocalDate.now()).getYears(); 	
     }
